@@ -16,6 +16,7 @@ import Root from './Pages/Root/Root';
 import Register from './Pages/Register/Register';
 import AuthProvider, { AuthContext } from './AuthProvider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Update from './Pages/Update/Update';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'/update',
+        element:<PrivateRoute><Update></Update></PrivateRoute>
       }
     ]
   },
