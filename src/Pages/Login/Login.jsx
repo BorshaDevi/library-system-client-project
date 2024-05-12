@@ -17,7 +17,7 @@ const Login = () => {
         console.log(result.user)
         Swal.fire({
           title: 'successfully logging',
-          text: ' iye',
+          text: ' Logging successfully',
           icon: 'success',
           confirmButtonText: 'ok'
         })
@@ -27,7 +27,7 @@ const Login = () => {
       console.log(error.message)
       Swal.fire({
         title: 'Error!',
-        text: ' iye',
+        text: 'logging error',
         icon: 'error',
         confirmButtonText: 'ok'
       })

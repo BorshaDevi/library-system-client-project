@@ -23,8 +23,8 @@ const AddBook = () => {
             console.log(res.data)
             if(res.data.insertedId){
                 Swal.fire({
-                    title: 'successfully logging',
-                    text: ' iye',
+                    title: 'successfully',
+                    text: ' Book Added successfully',
                     icon: 'success',
                     confirmButtonText: 'ok'
                   })
