@@ -49,13 +49,13 @@ const Navbar = () => {
   {
     loading?<span className="loading loading-spinner loading-lg"></span> : <div>
       {
-    user?<div className="dropdown ml-20 dropdown-end">
+    user?<div className="dropdown ml-20 dropdown-end ">
     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
       <div className="w-10 rounded-full">
         <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
       </div>
     </div>
-    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+    <ul tabIndex={0} className="mt-3 z-[50] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
       <li><p>{user?.displayName}</p></li>
     <li><button onClick={handleLogOut} className="bg-blue-600">LogOut</button></li>
     </ul>
