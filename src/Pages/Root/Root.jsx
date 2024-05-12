@@ -5,7 +5,7 @@ import Footer from "../../Components/Footer/Footer";
 
 const Root = () => {
     return (
-        <div className="h-screen bg-cover bg-scroll  bg-[url(https://i.ibb.co/VBLVTnD/young-student-learning-library.jpg)]"   >
+        <div className="h-screen bg-cover bg-scroll w-full  bg-[url(https://i.ibb.co/VBLVTnD/young-student-learning-library.jpg)]"   >
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
