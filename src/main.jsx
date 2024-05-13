@@ -48,8 +48,9 @@ const router = createBrowserRouter([
         element:<Register></Register>
       },
       {
-        path:'/update',
-        element:<PrivateRoute><Update></Update></PrivateRoute>
+        path:'/update/:id',
+        element:<PrivateRoute><Update></Update></PrivateRoute>,
+        loader:({params})=>fetch(`https://library-system-server-project.vercel.app/updateID/${params.id}`)
       }
     ]
   },

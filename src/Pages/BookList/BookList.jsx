@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const BookList = ({allBook}) => {
@@ -37,7 +38,8 @@ const BookList = ({allBook}) => {
               <td className="text-blue-700 font-bold  ">{category}</td>
               <td className="text-black font-bold ">{rating}</td>
               <th>
-                <button className=" text-blue-500 bg-white  rounded-t-xl rounded-b-xl ">Update</button>
+                <Link to={`/update/${_id}`} className=" text-blue-500  bg-white  rounded-t-xl rounded-b-xl ">Update</Link>
+                
               </th>
             </tr>
           </tbody>
