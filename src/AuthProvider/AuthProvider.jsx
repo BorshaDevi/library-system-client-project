@@ -2,6 +2,7 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStat
 import { useEffect, useState } from "react";
 import { createContext } from "react";
 import app from "../Firebase/Firebase";
+import axios from "axios";
 
 const auth=getAuth(app)
 const googleProvider = new GoogleAuthProvider();
@@ -29,11 +30,18 @@ const AuthProvider = ({children}) => {
             console.log(currentUser)
             setUser(currentUser)
             setLoading(false)
+            if(user){
+                axios.post('https://library-system-server-project.vercel.app/token',{email:user?.email})
+                .then(res => {
+                    console.log(res.data)
+                })
+
+            }
         })
         return () => {
-            unSubscribe()
+            return unSubscribe()
         }
-    },[])
+    },[user])
     const info={
        user,
        loading,

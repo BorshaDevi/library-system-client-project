@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-
+import { Rating } from 'react-simple-star-rating'
 const BookList = ({allBook}) => {
     const {_id,bookName,image,category,rating,authorName}=allBook
     return (
@@ -36,7 +36,10 @@ const BookList = ({allBook}) => {
               </td>
               
               <td className="text-blue-700 font-bold  ">{category}</td>
-              <td className="text-black font-bold ">{rating}</td>
+              <td className="text-black font-bold "> <Rating
+              initialRating={rating}
+              
+              ></Rating></td>
               <th>
                 <Link to={`/update/${_id}`} className=" text-blue-500  bg-white  rounded-t-xl rounded-b-xl ">Update</Link>
                 

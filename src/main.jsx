@@ -17,6 +17,7 @@ import Register from './Pages/Register/Register';
 import AuthProvider, { AuthContext } from './AuthProvider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Update from './Pages/Update/Update';
+import BookList from './Pages/BookList/BookList';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,7 +52,8 @@ const router = createBrowserRouter([
         path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
         loader:({params})=>fetch(`https://library-system-server-project.vercel.app/updateID/${params.id}`)
-      }
+      },
+      
     ]
   },
 ]);
