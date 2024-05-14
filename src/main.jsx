@@ -18,6 +18,7 @@ import AuthProvider, { AuthContext } from './AuthProvider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Update from './Pages/Update/Update';
 import BookList from './Pages/BookList/BookList';
+import CategoryBook from './Pages/Home/CategoryBook';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,7 +54,10 @@ const router = createBrowserRouter([
         element:<PrivateRoute><Update></Update></PrivateRoute>,
         loader:({params})=>fetch(`https://library-system-server-project.vercel.app/updateID/${params.id}`)
       },
-      
+      {
+        path:'/cateBook/:category',
+        element:<CategoryBook></CategoryBook>
+      }
     ]
   },
 ]);
