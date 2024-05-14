@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 import axios from "axios";
 import BookList from "../BookList/BookList";
 import { TbArticle } from "react-icons/tb";
@@ -8,15 +8,15 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import GridBook from "../GridBook/GridBook";
 const AllBook = () => {
-    const {user}=useContext(AuthContext)
+    
     const [allBooks,setAllBooks]=useState([])
     useEffect(()=> {
-        axios.get(`https://library-system-server-project.vercel.app/allBooks/${user?.email}`)
+        axios.get('https://library-system-server-project.vercel.app/allBooks')
         .then(res => {
             console.log(res.data)
             setAllBooks(res.data)
         })
-    },[user])
+    },[])
     return (
         <>
        <Tabs>

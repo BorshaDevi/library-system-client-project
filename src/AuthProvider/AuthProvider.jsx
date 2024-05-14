@@ -46,7 +46,7 @@ const AuthProvider = ({children}) => {
             else{
                 axios.post('https://library-system-server-project.vercel.app/logout',{email:userEmail},{withCredentials:true})
                 .then(res => {
-                    
+                    console.log(res.data)
                 })
             }
         })

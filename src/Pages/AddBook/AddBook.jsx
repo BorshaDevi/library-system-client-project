@@ -21,8 +21,8 @@ const AddBook = () => {
         axios.post('https://library-system-server-project.vercel.app/books',books)
         .then(res => {
             console.log(res.data)
-            if(res.data.insertedId>0){
-                
+            if(res.data.insertedId){
+                form.reset()
                 Swal.fire({
                     title: 'successfully',
                     text: ' Book Added successfully',
