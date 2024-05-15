@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const Details = () => {
@@ -15,6 +16,7 @@ const Details = () => {
 
         const userEmail=form.email.value;
         const returnDate=form.returnDate.value;
+        const borrowDate=form.borrowDate.value;
         const borrow={
             bookNumber,
             userName,
@@ -22,13 +24,24 @@ const Details = () => {
             returnDate,
             category,
             bookName,
-            book_id:_id,
+            _id,
             image,
+            borrowDate
             
         }
         axios.post('https://library-system-server-project.vercel.app/borrow',borrow)
         .then(res => {
-            console.log(res.data)
+          console.log(res.data)
+            if(res.data.insertedId){
+              
+              Swal.fire({
+                title: 'successfully',
+                text: ' Book Borrow successfully',
+                icon: 'success',
+                confirmButtonText: 'ok'
+              })
+
+            }
         })
         
         
@@ -62,6 +75,13 @@ const Details = () => {
           
         </div>
         
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Borrow Date</span>
+          </label>
+          <input type="Date" name='borrowDate' className="input input-bordered" required />
+          
+        </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Return Date</span>

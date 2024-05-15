@@ -34,6 +34,8 @@ const Navbar = () => {
         <li><NavLink  className='text-blue-300 hover:text-blue-500 font-bold' to='/addBook'>Add Book</NavLink></li>
         <li><NavLink className='text-blue-300 hover:text-blue-500 font-bold' to='/allBook'>All Books</NavLink></li>
         <li><NavLink className='text-blue-300 hover:text-blue-500 font-bold' to='/borrowedBook'>Borrowed Books</NavLink></li>
+        {/* <li><NavLink className='text-blue-300 hover:text-blue-500 font-bold' to='/borrowedBook'></NavLink></li> */}
+
     </>
     return (
         <div>
