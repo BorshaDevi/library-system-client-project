@@ -15,7 +15,7 @@ const AddBook = () => {
         const authorName=form.authorName.value;
         const content=form.content.value;
         const rating=form.rating.value;
-        const bookNumber=form.bookNumber.value;
+        const bookNumber=parseInt(form.bookNumber.value);
         const books={bookName,image,description,category,authorName,content,rating,bookNumber}
         console.log(books)
         axios.post('https://library-system-server-project.vercel.app/books',books)

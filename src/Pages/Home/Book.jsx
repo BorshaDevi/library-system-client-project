@@ -17,7 +17,7 @@ const Book = ({data}) => {
               
               ></Rating></p>
     <div className="card-actions mt-10 ">
-      <Link to='/details'><button className="btn hover:bg-blue-400">Details</button></Link>
+      <Link to={`/details/${_id}`}><button className="btn hover:bg-blue-400">Details</button></Link>
     </div>
   </div>
 </div>

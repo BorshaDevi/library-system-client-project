@@ -61,8 +61,9 @@ const router = createBrowserRouter([
        
       },
       {
-        path:'/details',
-        element:<PrivateRoute><Details></Details></PrivateRoute>
+        path:'/details/:id',
+        element:<PrivateRoute><Details></Details></PrivateRoute>,
+        loader:({params})=>fetch(`https://library-system-server-project.vercel.app/updateID/${params.id}`)
       }
     ]
   },
