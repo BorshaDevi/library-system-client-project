@@ -19,6 +19,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Update from './Pages/Update/Update';
 import BookList from './Pages/BookList/BookList';
 import CategoryBook from './Pages/Home/CategoryBook';
+import Details from './Pages/Details/Details';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,7 +57,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/cateBook/:category',
-        element:<CategoryBook></CategoryBook>
+        element:<CategoryBook></CategoryBook>,
+       
+      },
+      {
+        path:'/details',
+        element:<PrivateRoute><Details></Details></PrivateRoute>
       }
     ]
   },

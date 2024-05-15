@@ -8,7 +8,7 @@ const BookCategory = () => {
     useEffect(()=> {
         axios.get('https://library-system-server-project.vercel.app/category')
         .then(res => {
-            console.log(res.data)
+            
             setBookcates(res.data)
         })
     })
