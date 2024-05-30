@@ -3,9 +3,10 @@ import { Rating } from 'react-simple-star-rating'
 
 const Book = ({data}) => {
     console.log(data)
-    const {category,bookName,image,rating,authorName,_id}=data
+    const {category,bookName,image,rating,authorName,_id,bookNumber}=data
     return (
         <div>
+          
            <div className="card card-side mt-5 bg-white mx-auto max-w-6xl shadow-xl">
   <figure><img src={image} className="w-60" alt="Movie"/></figure>
   <div className="card-body">

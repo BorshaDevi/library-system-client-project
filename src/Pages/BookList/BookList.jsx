@@ -4,7 +4,7 @@ import { Rating } from 'react-simple-star-rating'
 const BookList = ({allBook}) => {
     const {_id,bookName,image,category,rating,authorName}=allBook
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto bg-blue-400">
         <table className="table">
           {/* head */}
           <thead>

@@ -53,6 +53,7 @@ const Details = () => {
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img src={image}className="max-w-sm rounded-lg shadow-2xl" />
     <div>
+    <h1>quntiti :{bookNumber}</h1>
       <h1 className="text-5xl font-bold text-white">{bookName}</h1>
       <p className="text-blue-900">{authorName}</p>
       <p className="py-6">{description}</p>
